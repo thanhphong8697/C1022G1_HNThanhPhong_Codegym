@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ.
+        Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.</title>
+</head>
+<body>
+<script>
+    // let str = prompt('Nhập một số từ bàn phím')
+    // let mangStr = str.split('')
+    // for (let i = 0; i < mangStr.length; i++){
+    //     switch (mangStr[i]) {
+    //         case '0':
+    //             document.writeln(' không');
+    //             break;
+    //         case '1':
+    //             document.writeln(' một');
+    //             break;
+    //         case '2':
+    //             document.writeln(' hai');
+    //             break;
+    //         case '3':
+    //             document.writeln(' ba');
+    //             break;
+    //         case '4':
+    //             document.writeln(' bốn');
+    //             break;
+    //         case '5':
+    //             document.writeln(' năm');
+    //             break;
+    //         case '6':
+    //             document.writeln(' sáu');
+    //             break;
+    //         case '7':
+    //             document.writeln(' bảy');
+    //             break;
+    //         case '8':
+    //             document.writeln(' tám');
+    //             break;
+    //         case '9':
+    //             document.writeln(' chín');
+    //             break;
+    //     }
+    // }
+    let mang = ['không', 'một', 'hai', 'ba', 'bốn', 'năm', 'sáu', 'bảy', 'tám', 'chín']
+    let nhap = prompt('nhập số từ bàn phím')
+    for (let i = 0; i < nhap.length; i++) {
+        document.writeln(mang[nhap[i]]);
+    }
+</script>
+</body>
+</html>

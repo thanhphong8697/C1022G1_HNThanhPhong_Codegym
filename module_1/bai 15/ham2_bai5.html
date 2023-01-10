@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhập số 1')
+    let b = +prompt('Nhập số 2')
+    let c = +prompt('Nhập số 3')
+    function soSanh(x,y,z) {
+        if (x < y && x < z ){
+            alert('Số nhỏ nhất là ' + x)
+        }else if ( y < z){
+            alert('Số nhỏ nhất là ' + y)
+        }else {
+            alert('Số nhỏ nhất là ' + z)
+        }
+    }
+    soSanh(a,b,c)
+</script>
+</body>
+</html>

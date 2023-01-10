@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let b = prompt('nhập chuỗi số');
+    let a = b.split('');
+    findMaxNumber(a);
+
+    function findMaxNumber(c) {
+        for (let i = 0; i < c.length; i++) {
+            if (c.length !== 4) {
+                document.write(-1);
+                break;
+            } else if (c.length === 4) {
+                if (c[i] > c[i - 1]) {
+                    c.splice(i - 1, 1);
+                    document.write(c.join(''))
+                    break;
+                }
+                if (c[i] < c[i - 1]) {
+                    c.splice(i, 1);
+                    document.write(c.join(''))
+                    break;
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>

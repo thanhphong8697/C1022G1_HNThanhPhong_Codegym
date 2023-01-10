@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let number
+    let a;
+    let count = 0;
+    while (count < 2){
+        a = true;
+        number= +prompt('Nhập số nguyên tố')
+        for (let i = 2; i < number; i++){
+            if (number % i ==0){
+                a = false;
+                break;
+            }
+        }
+        if (a){
+            a = true;
+            document.writeln(number + 'Số nguyên tố <br>');
+            count++;
+        }
+    }
+
+
+
+</script>
+</body>
+</html>

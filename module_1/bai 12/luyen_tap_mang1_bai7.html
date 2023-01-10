@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = Array(5)
+    for (let i = 0; i < a.length; i++) {
+        a[i] = +prompt('Nhập phần tử vào mảng')
+    }
+    let v = +prompt('Nhập số V')
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] === v) {
+            for (let j = i; j < a.length - 1; j++) {
+                a[j] = a[j + 1]
+            }
+            a[a.length - 1] = 0;
+        }
+    }
+    document.writeln(a)
+
+</script>
+</body>
+</html>

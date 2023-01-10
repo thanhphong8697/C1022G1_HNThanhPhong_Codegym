@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập từ cần dịch</p>
+<input id="1" type="text">
+<br>
+<br>
+<button type="button" onclick="dich()">Dịch</button>
+
+<script>
+    function dich() {
+        let eng = ['red', 'yellow', 'green', 'black', 'white']
+        let vn = ['màu đỏ', 'màu vàng', 'màu xanh lá', 'màu đen', 'màu trắng']
+        let sea = document.getElementById('1').value;
+        let a = eng.indexOf(sea)
+        if (a != -1) {
+            alert(document.getElementById('1').value + ' nghĩa là ' + vn[a])
+        } else {
+            alert('Không tìm thấy từ nhập vào')
+        }
+
+
+    }
+
+
+</script>
+</body>
+</html>

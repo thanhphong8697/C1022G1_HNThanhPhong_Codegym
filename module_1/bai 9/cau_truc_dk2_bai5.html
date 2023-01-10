@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Nhập cạnh kề vuông góc 1 (cm2): </p>
+    <input type="text" id="1">
+    <br>
+    <br>
+    <p>Nhập cạnh kề vuông góc 2 (cm2): </p>
+    <input type="text" id="2">
+    <br>
+    <br>
+    <button type="button" onclick="tamgiac()">Tính diện tích</button>
+    <br>
+    <br>
+    <p id="3"></p>
+
+    <script>
+        function tamgiac() {
+            let a = parseFloat(document.getElementById('1').value);
+            let b = parseFloat(document.getElementById('2').value);
+            let c = (a * b) / 2
+            if (a > 0 && b > 0) {
+                document.getElementById('3').innerHTML = 'Diện tích của hình tam giác vuông là: ' + c + ' (cm2)'
+            }else {
+                document.getElementById('3').innerHTML = 'Độ dài của cạnh không phù hợp'
+            }
+
+        }
+    </script>
+</body>
+</html>

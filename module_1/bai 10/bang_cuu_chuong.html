@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = '<table border="3">'
+    for (let i=1; i<=9;i++){
+        a = a + '<tr>'
+        for (let j=1; j<=10;j++) {
+            a = a + '<td>'+i + " x " + j +" = "+i*j+'</td>'
+        } a = a + '</tr>'
+    } a =a+ '</table>'
+    document.writeln(a)
+
+</script>
+</body>
+</html>

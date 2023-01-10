@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let a = +prompt('nhập độ dài của mảng')
+    let b = [];
+    let c
+    for (let i = 0; i < a; i++){
+            b[i] = +prompt('nhập các phần tử trong mảng');
+        }
+        let v = +prompt('nhập số V')
+        c = b.indexOf(v)
+        if ( c != -1){
+            document.writeln('V is in the array')
+        }else {
+            document.writeln('V is not in the array')
+        }
+
+
+
+</script>
+</body>
+</html>

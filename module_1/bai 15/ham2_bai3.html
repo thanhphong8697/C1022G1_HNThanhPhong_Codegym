@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhập số để tính giai thừa')
+
+    function giaiThua(b) {
+        let c = 1
+        for (let i = 1; i <= b; i++) {
+            c *= i
+        }
+        document.writeln(b + '! = ' + c)
+    }
+
+    giaiThua(a)
+</script>
+</body>
+</html>

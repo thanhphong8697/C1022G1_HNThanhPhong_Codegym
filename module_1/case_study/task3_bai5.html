@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Giả sử menu của chúng ta có các loại thức uống như sau:
+        Cafe
+        Cam vắt
+        Nước ép cà rốt
+        Nước ép cà chua
+        Nước lọc
+        Nước dừa
+        Viết một chương trình gọi thức uống đơn giản.
+        Gợi ý: Trước tiên in ra màn hình danh sách các loại thức uống cho người dùng chọn lựa
+        Đánh dấu theo thứ tự 1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc), 6(nước dừa),
+        7(thoát gọi món)
+        Khi người dùng lựa chọn 1 trong số các thức uống,
+        chương trình sẽ hiện đơn giá của thức uống đó và cho phép người dùng nhập số lượng.
+        Cuối cùng hiển thị tổng số tiền người dùng cần phải trả.
+        Sử dụng vòng lặp do while lặp lại cho người dùng đặt thức uống, kết thúc quá trình đặt thức uống khi người nhấn
+        số 7
+    </title>
+</head>
+<body>
+<table style="text-align: left">
+    <tr>
+        <th>Thực đơn đồ uống</th>
+        <td></td>
+        <th>Giá</th>
+        <td></td>
+        <th>Số lượng</th>
+    </tr>
+    <tr>
+        <td>1. Cafe</td>
+        <td></td>
+        <td>10k</td>
+        <td></td>
+        <td><input type="text" id="cafe" placeholder="Nhập số lượng"></td>
+<!--        <td>-->
+<!--            <button type="button" onclick="cafe()"> Tính tiền</button>-->
+<!--        </td>-->
+    </tr>
+    <tr>
+        <td>2. Cam vắt</td>
+        <td></td>
+        <td>10k</td>
+        <td></td>
+        <td><input type="text" id="cam" placeholder="Nhập số lượng"></td>
+<!--        <td>-->
+<!--            <button type="button" onclick="cam()"> Tính tiền</button>-->
+<!--        </td>-->
+    </tr>
+    <tr>
+        <td>3. Nước ép cà rốt</td>
+        <td></td>
+        <td>10k</td>
+        <td></td>
+        <td><input type="text" id="carot" placeholder="Nhập số lượng"></td>
+<!--        <td>-->
+<!--            <button type="button" onclick="caRot()"> Tính tiền</button>-->
+<!--        </td>-->
+    </tr>
+    <tr>
+        <td>4. Nước ép cà chua</td>
+        <td></td>
+        <td>10k</td>
+        <td></td>
+        <td><input type="text" id="cachua" placeholder="Nhập số lượng"></td>
+<!--        <td>-->
+<!--            <button type="button" onclick="caChua()"> Tính tiền</button>-->
+<!--        </td>-->
+    </tr>
+    <tr>
+        <td>5. Nước lọc</td>
+        <td></td>
+        <td>10k</td>
+        <td></td>
+        <td><input type="text" id="nuocloc" placeholder="Nhập số lượng"></td>
+<!--        <td>-->
+<!--            <button type="button" onclick="nuocLoc()"> Tính tiền</button>-->
+<!--        </td>-->
+    </tr>
+    <tr>
+        <td>6. Nước dừa</td>
+        <td></td>
+        <td>10k</td>
+        <td></td>
+        <td><input type="text" id="dua" placeholder="Nhập số lượng"></td>
+<!--        <td>-->
+<!--            <button type="button" onclick="dua()"> Tính tiền</button>-->
+<!--        </td>-->
+    </tr>
+</table>
+<br>
+<button type="button" onclick="tinhTong()">Tính tổng hoá đơn</button>
+<br>
+<p id="hoadon"></p>
+<script>
+
+    // function cafe() {
+    //     let cafe = document.getElementById('cafe').value;
+    //     let tinhTien = cafe * 10000;
+    //     document.getElementById('hoadon').innerHTML = 'Tổng tiền cafe là: ' + tinhTien + 'VNĐ'
+    // }
+    //
+    // function cam() {
+    //     let cam = document.getElementById('cam').value;
+    //     let tinhTien = cam * 10000;
+    //     document.getElementById('hoadon').innerHTML = 'Tổng tiền nước cam là: ' + tinhTien + 'VNĐ'
+    // }
+    //
+    // function caRot() {
+    //     let caRot = document.getElementById('carot').value;
+    //     let tinhTien = caRot * 10000;
+    //     document.getElementById('hoadon').innerHTML = 'Tổng tiền nước ép cà rốt là: ' + tinhTien + 'VNĐ'
+    // }
+    //
+    // function caChua() {
+    //     let caChua = document.getElementById('cachua').value;
+    //     let tinhTien = caChua * 10000;
+    //     document.getElementById('hoadon').innerHTML = 'Tổng tiền nước ép cà chua là: ' + tinhTien + 'VNĐ'
+    // }
+    //
+    // function nuocLoc() {
+    //     let nuocLoc = document.getElementById('nuocloc').value;
+    //     let tinhTien = nuocLoc * 10000;
+    //     document.getElementById('hoadon').innerHTML = 'Tổng tiền nước lọc là: ' + tinhTien + 'VNĐ'
+    // }
+    //
+    // function dua() {
+    //     let dua = document.getElementById('dua').value;
+    //     let tinhTien = dua * 10000;
+    //     document.getElementById('hoadon').innerHTML = 'Tổng tiền nước dừa là: ' + tinhTien + 'VNĐ'
+    // }
+
+    function tinhTong() {
+        let cafe = document.getElementById('cafe').value;
+        let tinhTien1 = cafe * 10000;
+        let cam = document.getElementById('cam').value;
+        let tinhTien2 = cam * 10000;
+        let caRot = document.getElementById('carot').value;
+        let tinhTien3 = caRot * 10000;
+        let caChua = document.getElementById('cachua').value;
+        let tinhTien4 = caChua * 10000;
+        let nuocLoc = document.getElementById('nuocloc').value;
+        let tinhTien5 = nuocLoc * 10000;
+        let dua = document.getElementById('dua').value;
+        let tinhTien6 = dua * 10000;
+        let tong = tinhTien1 + tinhTien2 + tinhTien3 + tinhTien4 + tinhTien5 + tinhTien6
+        document.getElementById('hoadon').innerHTML = 'Tổng hoá đơn là: ' + tong + 'VNĐ'
+    }
+</script>
+</body>
+</html>

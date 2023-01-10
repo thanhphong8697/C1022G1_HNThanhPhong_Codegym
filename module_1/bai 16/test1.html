@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+
+    class Student { // PascalCase
+        constructor(id, name, dateOfBirth, email) { // camelCase
+            this.id = id;
+            this.name = name;
+            this.dateOfBirth = dateOfBirth;
+            this.email = email;
+        }
+
+        eating(food) {
+            console.log(this.name + " dang an " + food)
+        }
+    }
+
+    let student = new Student(2342, "Quan", "02-02-2022", "@mgil.sdfdsf");
+    console.log(student.email);
+    student.eating("banh");
+
+    // let studentObj1 =
+    //     new Student(324, "Quoc", "2000-11-21", "quoc@gmail.com");
+    // let studentObj2 =
+    //     new Student(764, "Dao", "2000-11-22", "dao@gmail.com");
+    //
+    // studentObj1.eating("banana");
+    // console.log(studentObj1);
+    // studentObj1.email = "quocc10@gmai.com";
+    // console.log(studentObj1);
+    // studentObj2.eating("khoai tay");
+    // console.log(studentObj1.dateOfBirth);
+
+    // let studentList = [];
+    // studentList.push(new Student(234, "Nguyen Van An", "2000-01-20", "abc@gmail.com"));
+    // studentList.push(new Student(765, "Nguyen Van Binh", "2000-01-02", "767@gmail.com"));
+    // studentList.push(new Student(132, "Le Van C", "2000-01-22", "dfds@gmail.com"));
+    // studentList.push(new Student(987, "Tran Van D", "2000-11-23", "fbgb@gmail.com"));
+
+
+    console.log(studentList[2].email);
+    // for(let i = 0; i < studentList.length; i++) {
+    //     console.log(studentList[i]);
+    // }
+
+</script>
+</body>
+</html>

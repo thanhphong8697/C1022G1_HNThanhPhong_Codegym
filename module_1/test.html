@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>What Can JavaScript Do?</h2>
+<p>JavaScript can change HTML attributes.</p>
+<p>In this case JavaScript changes the src (source) attribute of an image.</p>
+<button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulbon.gif'">Turn on the light</button>
+<img id="myImage" src="https://www.w3schools.com/js/pic_bulboff.gif" style="width:100px">
+<button onclick="document.getElementById('myImage').src='https://www.w3schools.com/js/pic_bulboff.gif'">Turn off the light</button>
+</body>
+</html><script>
+
+    class Rat {
+        constructor(name, weight, speed, status) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.status = status;
+        }
+
+        growl() {
+            console.log(this.name + ": Chit, chit");
+        }
+    }
+
+    class Cat {
+        constructor(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+        }
+
+        growl() {
+            console.log(this.name + ": Meow, meow");
+        }
+
+        catch(ratObj) {
+
+            if (this.speed > ratObj.speed) {
+                console.log(`Da bat duoc chuot ${ratObj.name} :D`);
+                this.eat(ratObj);
+            } else {
+                console.log("Meo cham qua, khong bat duoc chuot roi :(");
+            }
+        }
+
+        eat(ratObj) {
+            this.weight += ratObj.weight;
+            console.log("Khoi luong meo hien tai la: " + this.weight);
+        }
+    }
+
+    let jerryObj = new Rat("Jerry", 2, 3, "song");
+    let tomObj = new Cat("Tom", 10, 2);
+
+    jerryObj.growl();
+    tomObj.growl();
+    tomObj.catch(jerryObj);
+    tomObj.eat(jerryObj);
+
+
+</script>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(c) {
+            this.c = c;
+        }
+
+        temperF() {
+            document.writeln('Nhiệt độ F là: ' + ((this.c * 9 / 5) + 32) + ' °F');
+        }
+
+        temperK() {
+            document.writeln('Nhiệt độ K là: ' + (this.c + 273.15) + ' °K');
+        }
+    }
+    let temperObj = new Temperature(5);
+    temperObj.c = 25;
+    temperObj.temperK();
+    document.writeln('<br>');
+    temperObj.temperF();
+
+</script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tuong tac giua cong tac va bong den</title>
+</head>
+<body>
+<script>
+    class SwitchButton{
+        constructor(status) {
+            this.statusSwitchBut = status;
+            ElectricLamp: this.lamp= null;
+        }
+        getLamp(){
+            return this.lamp();
+        }
+        setLamp(){
+            this.lamp=lamp;
+        }
+        connectToLamp(ElectricLamp){
+            this.lamp=ElectricLamp;
+        }
+        switchOff(){
+            this.statusSwitchBut = false;
+            this.lamp.setStatus(false);
+        }
+        switchOn(){
+            this.statusSwitchBut = true;
+            this.lamp.setStatus(true);
+        }
+    }
+
+    class ElectricLamp{
+        constructor(status) {
+            this.statusLamp = status;
+        }
+        get status(){
+            return this.statusLamp;
+        }
+        setStatus(status) {
+            this.statusLamp = status;
+        }
+    }
+
+    let lamp = new ElectricLamp(true);
+    let switchButton = new SwitchButton(true);
+    console.log(lamp.statusLamp);
+    console.log(switchButton.statusSwitchBut);
+    switchButton.connectToLamp(lamp);
+    switchButton.switchOff();
+    console.log(lamp.statusLamp);
+</script>
+</body>
+</html>

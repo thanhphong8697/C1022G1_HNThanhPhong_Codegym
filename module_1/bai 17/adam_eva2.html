@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor(weight) {
+            this.weight = weight;
+        }
+        getweight(){
+            return this.weight;
+        }
+        setweight(weight){
+            this.weight = weight;
+        }
+      isEmpty(){
+            if (this.weight > 0){
+                return true;
+            }else {
+                return false;
+            }
+      }
+      decrease(){
+            if (this.isEmpty() === true){
+                return this.weight--;
+            }else {
+                document.writeln('Không có táo')
+            }
+      }
+    }
+    class Human{
+        constructor(name, weight, gender) {
+            this.name = name;
+            this.weight = weight;
+            this.gender = gender;
+        }
+        getName(){
+            return this.name;
+        }
+        setName(nameObj){
+            this.name = nameObj;
+        }
+        getWeight(){
+            return this.weight;
+        }
+        setWeight(weightObj){
+            this.weight = weightObj;
+        }
+
+        say(humanObj){
+            document.writeln('Xin chào');
+        }
+        isMale(){
+            if (this.gender === 0){
+                return true;
+            }else {
+                return false;
+            }
+        }
+        getGender(){
+            if (this.isMale() === true){
+                return this.gender === Male;
+            }else {
+                return  this.gender === Female;
+            }
+        }
+        checkApple(appleObj){
+            return appleObj.isEmpty;
+        }
+        eat(appleObj){
+            if(appleObj.getWeight() > 0){
+                appleObj.decrease();
+                this.weight++;
+            }else {
+                document.writeln('Đã hết táo');
+            }
+        }
+    }
+    let adam = new Human("adam",0 , 55);
+    let eva = new Human("eva", 1, 45);
+    let apple1 = new Apple(10);
+    document.writeln(adam.say())
+    while (apple1.isEmpty() !== false){
+        adam.eat(apple1);
+        document.writeln(adam.getWeight() + '<br>');
+        document.writeln(apple1.getWeight() + '<br>')
+    }
+</script>
+</body>
+</html>

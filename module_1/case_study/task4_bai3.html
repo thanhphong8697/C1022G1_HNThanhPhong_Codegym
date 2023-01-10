@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str1 = prompt('Nhập chuỗi kí tự chữ 1');
+    let str2 = prompt('Nhập chuỗi kí tự chữ 2');
+    let mangStr1 = str1.split('');
+    let mangStr2 = str2.split('');
+    let mang = [];
+    let count = 0;
+    for (let i = 0; i < mangStr2.length; i++) {
+        if (mangStr1.indexOf(mangStr2[i]) !== -1) {
+                mang.push(mangStr2[i]);
+                count++;
+                mangStr1.splice(mangStr1.indexOf(mangStr2[i]),1);
+        }
+    }
+    document.writeln('Số kí tự giống nhau là: ' + count + '<br>');
+    document.writeln('Có ' + count + ' kí tự giống nhau là: ' + mang);
+</script>
+</body>
+</html>

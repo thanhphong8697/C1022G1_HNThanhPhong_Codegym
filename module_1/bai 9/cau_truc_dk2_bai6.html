@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <p>Nhập số a: </p>
+    <input type="text" id="1">
+    <br>
+    <br>
+    <p>Nhập số b: </p>
+    <input type="text" id="2">
+    <br>
+    <br>
+    <button type="button" onclick="tinh()">Đáp án</button>
+    <br>
+    <br>
+    <p id="3"></p>
+
+    <script>
+        function tinh() {
+            let a = parseFloat(document.getElementById('1').value);
+            let b = parseFloat(document.getElementById('2').value);
+            let c
+            if (a != 0 && b != 0){
+                c =(-b) / a
+            }else if (a == 0 && b == 0) {
+                c = 'vô số nghiệm'
+            } else {
+                c = 'vô nghiệm'
+            }
+            document.getElementById('3').innerHTML="Phương trình có nghiệm là: " + c
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [2,5,1,4,3]
+    let max
+    let sum = 0
+    for (let i = 0; i < a.length; i++){
+        sum = sum + a[i]
+        if (i == 1){
+            max = a[1]
+        }if (a[i] > max){
+            max = a[i]
+        }
+
+    } document.writeln('Số lớn nhất trong mảng là : ' + max + '<br>')
+    document.writeln('Giá trị trung bình các phần tử trong mảng là : ' + sum / a.length)
+</script>
+
+</body>
+</html>

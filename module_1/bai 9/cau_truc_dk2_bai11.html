@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = +prompt('Điền thu nhập cá nhân')
+        if (a > 0 && a <= 5000000){
+            alert('Thuế thu nhập cá nhân của bạn là: ' + (a * 0.05) + ' VNĐ')
+        }else if (a > 5000000 && a <= 10000000){
+            alert('Thuế thu nhập cá nhân của bạn là: ' + (a * 0.1) + ' VNĐ')
+        }else if (a > 10000000 && a <= 18000000){
+            alert('Thuế thu nhập cá nhân của bạn là: ' + (a * 0.15) + ' VNĐ')
+        }else if (a > 18000000 && a <= 32000000){
+            alert('Thuế thu nhập cá nhân của bạn là: ' + (a * 0.2) + ' VNĐ')
+        }else if (a > 32000000 && a <= 52000000){
+            alert('Thuế thu nhập cá nhân của bạn là: ' + (a * 0.25) + ' VNĐ')
+        }else if (a > 52000000 && a <= 80000000){
+            alert('Thuế thu nhập cá nhân của bạn là: ' + (a * 0.3) + ' VNĐ')
+        }else {
+            alert('Thuế thu nhập cá nhân của bạn là: ' + (a * 0.35) + ' VNĐ')
+        }
+    </script>
+
+</body>
+</html>

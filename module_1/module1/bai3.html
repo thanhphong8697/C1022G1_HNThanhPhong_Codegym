@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a =[1,9,2,3]
+    findMaxNumber(a)
+    function findMaxNumber(a) {
+        for (let i=0;i<a.length;i++){
+            if (a.length !==4){
+                document.write(-1) ;
+                break;
+            }
+            else if (a.length === 4){
+                if (a[i]>a[i-1]){
+                    a.splice(i-1,1);
+                    break;
+
+                }
+                if (a[i]<a[i-1]){
+                    a.splice(i,1);
+                    break;
+                }
+            }
+        }
+        document.write(a.join(''))
+
+        //     let n=prompt('Nhập số');
+        // let i;
+        // let arr=n.split('');
+        // let count=0;
+        // if (n.length<4) document.write('-1');
+        // else {
+        //     for (i=0;i<arr.length-1;i++){
+        //         if (arr[i]<arr[i+1]){
+        //             arr.splice(i,1);
+        //             break;
+        //         }
+        //         else count++
+        //     }
+        // }
+        // if (count==n.length-1) arr.splice(arr.length-1,1)
+        // document.write(arr.join(''))
+</script>
+</body>
+</html>

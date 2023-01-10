@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhập độ dài của mảng')
+    let b = []
+
+    for (let i = 0; i < a; i++) {
+        b[i] = +prompt('Nhập phần tử của mảng')
+    }
+    let v = +prompt('Nhập kí tự V')
+
+    function kiemTra(x) {
+        let flag = false
+        let count = 0
+        for (let i = 0; i < x.length; i++) {
+            if (v === x[i]) {
+                flag = true;
+                count++
+            }
+        }
+        if (flag) {
+            return alert('số lần xuất hiện kí tự là: ' + count)
+        } else {
+            return alert('-1')
+        }
+    }
+
+    kiemTra(b)
+</script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label>Nhập chiều dài (cm): </label>
+<input type="text" id="1">
+<br>
+<br>
+<label>Nhập chiều rộng (cm): </label>
+<input type="text" id="2">
+<br>
+<br>
+<button type="button" onclick="dientich()">Tính diện tích</button>
+<br>
+<br>
+<p id="3"></p>
+
+
+</body>
+<script>
+    function dientich() {
+        let a = parseFloat(document.getElementById('1').value);
+        let b = parseFloat(document.getElementById('2').value);
+        let c = a * b
+        if (a > 0 && b > 0)
+        {
+        document.getElementById('3').innerHTML = 'Diện tích của hình chữ nhật là: ' + c + ' (cm2)'
+        }else {
+            document.getElementById('3').innerHTML = 'Chiều dài cạnh không phù hợp'
+        }
+
+    }
+
+</script>
+</html>

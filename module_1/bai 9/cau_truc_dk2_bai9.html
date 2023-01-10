@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = +prompt('Nhập chiều dài cạnh 1')
+        let b = +prompt('Nhập chiều dài cạnh 2')
+        let c = +prompt('Nhập chiều dài cạnh 3')
+        if (a > 0 && b > 0 && c > 0){
+            if (a + b > c && b + c > a && a + c > b){
+                        alert('ba số ' + a + ' ' + b + ' ' +' '+ c + ' là ba cạnh của một tam giác')
+                    }else { alert('ba số ' + a + ' ' + b + ' ' +' '+ c + ' không phải là ba cạnh của một tam giác') }
+        }else {
+            alert('ba số ' + a + ' ' + b + ' ' +' '+ c + ' không phải là ba cạnh của một tam giác')
+        }
+    </script>
+</body>
+</html>

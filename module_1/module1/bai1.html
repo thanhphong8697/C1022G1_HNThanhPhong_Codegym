@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let numb = [5, 10, 15, 20];
+    let result;
+    let a = true;
+    result = numb[1] - numb[0]
+    for (let i = 1; i < numb.length; i++) {
+        if (result == (numb[i] - numb[i - 1])) {
+            a = true
+
+        } else {
+            a = false;
+
+            break;
+        }
+    }
+    if (a) {
+        console.log('oke')
+    } else {
+        console.log('No')
+    }
+</script>
+</body>
+</html>

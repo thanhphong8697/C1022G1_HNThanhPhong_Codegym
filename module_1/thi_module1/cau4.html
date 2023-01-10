@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<p id="danhSach"></p>
+<p id="danhSach1"></p>
+<p id="danhSach2"></p>
+<script>
+    class DanhSach {
+        constructor(soThuTu, ten, ngaySinh, diaChi, luong, chucVu) {
+            this.soThuTu = soThuTu;
+            this.ten = ten;
+            this.ngaySinh = ngaySinh;
+            this.diaChi = diaChi;
+            this.luong = luong;
+            this.chucVu = chucVu;
+        }
+    }
+
+    let quanLiCongNhan = [];
+    quanLiCongNhan.push(new DanhSach(1, 'Trương Tấn A', '11-11-1997', 'Quảng Nam', 2000, 'Abc'));
+    quanLiCongNhan.push(new DanhSach(2, 'Trương Tấn B', '11-11-1998', 'Đà Nẵng', 2000, 'Abc'));
+    quanLiCongNhan.push(new DanhSach(3, 'Trương Tấn C', '11-11-1999', 'Huế', 2000, 'Abc'));
+    console.log(quanLiCongNhan);
+    document.getElementById('danhSach').innerHTML = quanLiCongNhan[0].soThuTu + ' - ' + quanLiCongNhan[0].ten + ' - ' + quanLiCongNhan[0].ngaySinh + ' - ' + quanLiCongNhan[0].diaChi + ' - ' + quanLiCongNhan[0].luong + ' - ' + quanLiCongNhan[0].chucVu;
+    document.getElementById('danhSach1').innerHTML = quanLiCongNhan[1].soThuTu + ' - ' + quanLiCongNhan[1].ten + ' - ' + quanLiCongNhan[1].ngaySinh + ' - ' + quanLiCongNhan[1].diaChi + ' - ' + quanLiCongNhan[1].luong + ' - ' + quanLiCongNhan[1].chucVu;
+    document.getElementById('danhSach2').innerHTML = quanLiCongNhan[2].soThuTu + ' - ' + quanLiCongNhan[2].ten + ' - ' + quanLiCongNhan[2].ngaySinh + ' - ' + quanLiCongNhan[2].diaChi + ' - ' + quanLiCongNhan[2].luong + ' - ' + quanLiCongNhan[2].chucVu;
+
+
+</script>
+</body>
+</html>

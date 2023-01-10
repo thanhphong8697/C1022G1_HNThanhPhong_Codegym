@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [1, 2, 11, 20, 5, 8, 10, 15, 86, 52]
+    let max
+    let count = 0
+    for (let i = 0; i < a.length; i++) {
+        if (i == 0) {
+            max = a[0]
+        }
+        if (a[i] > max) {
+            max = a[i];
+            count = i
+        }
+    }
+    document.writeln('Số lớn nhất trong mảng là ' + max + '<br>')
+    document.writeln('Số lớn nhất đứng ở vị trí thứ ' + count + ' trong mảng.')
+</script>
+</body>
+</html>

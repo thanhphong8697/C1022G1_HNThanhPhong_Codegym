@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<canvas id="canvasObjectHTML" width="500" height="500"></canvas>
+
+<script>
+    let canvasObj = document.getElementById("canvasObjectHTML");
+    let ctx = canvasObj.getContext("2d");
+
+    // 1. Suy nghi y tuong
+    // ctx.arc(200, 200, 100, 0, 2 * Math.PI);
+    ctx.rect(200, 200, 500, 60);
+
+    // 2. Ve vien
+    ctx.strokeStyle = "red";
+    ctx.stroke();
+
+    // 3. Chon mau
+    ctx.fillStyle = "yellow";
+
+    // 4. To mau
+    ctx.fill();
+
+</script>
+</body>
+</html>

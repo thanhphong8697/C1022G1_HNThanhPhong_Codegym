@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // let str = prompt()
+    let mang = ['a' ,'b' ,'c' ,'d', 'c' ,'b' ,'a'];
+    let kiemTra = true;
+    for (let i = 0; i < mang.length; i++){
+        if (mang[i] === mang[mang.length-1 - i]){
+            kiemTra = true;
+        }else {
+            kiemTra = false;
+            break;
+        }
+    }
+    if (kiemTra){
+        document.writeln('đối xứng');
+    }else {
+        document.writeln('ko đối xứng');
+    }
+</script>
+</body>
+</html>

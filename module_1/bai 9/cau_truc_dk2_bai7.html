@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>Nhập số a: </p>
+<input type="text" id="1"><br>
+<br>
+<p>Nhập số b: </p>
+<input type="text" id="2"><br>
+<br>
+<p>Nhập số c: </p>
+<input type="text" id="3"><br>
+<br>
+<button type="button" onclick="bachai()">Đáp án</button>
+<br>
+<br>
+<p id="4"></p>
+<script>
+    function bachai() {
+        let a = parseFloat(document.getElementById('1').value);
+        let b = parseFloat(document.getElementById('2').value);
+        let c = parseFloat(document.getElementById('3').value);
+        let d = (b * b) - (4 * a * c);
+        let e = '';
+        let x1
+        let x2
+        alert(d)
+        if (a !== 0) {
+            if (d > 0) {
+                x1 = (-b + Math.sqrt(d)) / 2 * a;
+                x2 = (-b - Math.sqrt(d)) / 2 * a;
+                e = 'có hai nghiệm là ' + x1 + ' và ' + x2
+            } else if (d == 0) {
+                x1 = +(-b) / (2 * a);
+                e = 'có nghiệm kép là ' + x1
+            } else {
+                e = 'vô nghiệm '
+            }
+        } else if (a == 0) {
+            if (b != 0 && c != 0) {
+                e = '' + (-c) / b
+            } else if (c == 0 && b == 0) {
+                e = 'vô số nghiệm'
+            } else {
+                e = 'vô nghiệm'
+            }
+        }
+        document.getElementById('4').innerHTML = "Phương trình : " + e
+    }
+
+</script>
+
+
+</body>
+</html>

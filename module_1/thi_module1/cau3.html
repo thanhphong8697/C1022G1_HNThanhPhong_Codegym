@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let thang = +prompt('Nhập số tháng')
+    let nam = +prompt('Nhập số năm')
+    switch (thang) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            document.writeln('Tháng ' + thang + ' Năm ' + nam + ' có 31 ngày.');
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            document.writeln('Tháng ' + thang + ' Năm ' + nam + ' có 30 ngày.');
+            break;
+        case 2:
+            if (nam % 4 === 0) {
+                document.writeln(nam + ' là năm nhuận. ' + '<br>')
+                document.writeln('Tháng ' + thang + ' Năm ' + nam + ' có 29 ngày.');
+            } else {
+                document.writeln('Tháng ' + thang + ' Năm ' + nam + ' có 28 ngày.');
+            }
+            break;
+        default: {
+            document.writeln('Nhập sai số tháng.');
+        }
+    }
+</script>
+</body>
+</html>

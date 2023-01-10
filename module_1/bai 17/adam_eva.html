@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple{
+        constructor(weight) {
+            this.weight = weight;
+        }
+        isEmpty(){
+            if (this.weight < 0){
+                return true
+            }else {
+                return  false
+            }
+
+        }
+        getWeight(){
+            return this.weight
+        }
+    }
+    class Human{
+        constructor(name, weight, gender) {
+            this.name = name;
+            this.weight = weight;
+            this.gender = gender;
+        }
+        eat(appleObj){
+            if (appleObj.weight > 0 ){
+                console.log(this.name+' Đang ăn táo');
+                this.weiHu(appleObj);
+                this.weiApp(appleObj)
+            }else {
+                console.log('Không có táo')
+            }
+        }
+        weiHu(){
+            this.weight += 1 ;
+            console.log(this.name+'cân nặng hiện tại là' + this.weight)
+        }
+        weiApp(appObj){
+            appObj.weight -= 1;
+            console.log('Trọng lượng táo hiện tại: ' + appObj.weight)
+        }
+    }
+    let apple = new Apple(10);
+    let adam = new Human('Adam', 55, 'Nam');
+    let eva = new Human('Eva', 45 , 'Nữ');
+    for (let i = 0; i <= apple.weight; i++ ){
+        adam.eat(apple);
+        eva.eat(apple)
+    }
+
+
+
+</script>
+</body>
+</html>

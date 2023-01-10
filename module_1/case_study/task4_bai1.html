@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhập xâu ký tự');
+    str = str.toLowerCase();
+    let mangStr = str.split(' ');
+    for (let i = 0; i < mangStr.length; i++){
+        mangStr[i] = mangStr[i].charAt(0).toUpperCase() + mangStr[i].substring(1);
+    }
+    document.writeln(mangStr.join(' '));
+</script>
+</body>
+</html>

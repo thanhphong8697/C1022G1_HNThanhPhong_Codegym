@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let nhap = +prompt('Nhập vào một số nguyên dương');
+
+    function kiemTra(soNhapVao) {
+        let sum = 0;
+        let flag = true;
+        for (let i = 0; i < soNhapVao; i++) {
+            if (soNhapVao % i === 0) {
+                sum += i;
+            }
+            if (soNhapVao === sum) {
+                flag = true;
+            } else {
+                flag = false;
+            }
+        }
+        if (flag) {
+            document.writeln('Số nhập vào là số hoàn hảo');
+        } else {
+            document.writeln('Số nhập vào không phải là số hoàn hảo');
+        }
+    }
+
+    kiemTra(nhap);
+</script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let mang = [];
+
+    function sum(array) {
+        let doDaiMang = +prompt('Nhập độ dài mảng');
+        let sum = 0;
+        for (let i = 0; i < doDaiMang; i++) {
+            let doDaiMangCon = +prompt('Nhập độ dài mảng con ' + i);
+            mangCon = [];
+            array.push(mangCon);
+            for (let j = 0; j < doDaiMangCon; j++) {
+                mangCon[j] = +prompt('Nhập phần tử mảng con ' + j);
+                if (mangCon[j] % 2 === 0) {
+                    sum += +mangCon[j];
+                }
+            }
+        }
+        document.writeln('Tổng các số chẵn trong ma trận là: ' + sum);
+    }
+
+    sum(mang);
+</script>
+</body>
+</html>

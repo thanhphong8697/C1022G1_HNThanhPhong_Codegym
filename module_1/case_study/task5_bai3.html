@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    let mang = [];
+    function timKiem(array) {
+        let doDaiMang = +prompt('Nhập độ dài mảng');
+        for (let i = 0; i < doDaiMang; i++) {
+            let mangCon = [];
+            let doDaiMangCon = +prompt('Nhập độ dài mảng con ' + i + ' thứ ' + i);
+            array.push(mangCon)
+            for (let j = 0; j < doDaiMangCon; j++) {
+                mangCon[j] = +prompt('Nhập phần tử mảng con ' + j + ' thứ ' + j);
+            }
+        }
+        let max = array[0][0];
+        let min = array[1][1];
+        for (let i = 0; i < array.length; i++) {
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] > max) {
+                    max = array[i][j];
+                }
+            }
+            for (let j = 0; j < array[i].length; j++) {
+                if (array[i][j] < min) {
+                    min = array[i][j];
+                }
+            }
+        }
+        document.writeln('Giá trị lớn nhất trong mảng hai chiều là: ' + max + '<br>');
+        document.writeln('Giá trị nhỏ nhất trong mảng hai chiều là: ' + min);
+    }
+    timKiem(mang);
+</script>
+</body>
+</html>

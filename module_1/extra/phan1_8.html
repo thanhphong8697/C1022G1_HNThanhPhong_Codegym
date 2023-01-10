@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let mang = [];
+    let a = +prompt('nhập độ dài mảng')
+    for (let i = 0; i < a; i++){
+        let mangCon = [];
+        let b = +prompt('nhập độ dài mảng con');
+        mang.push(mangCon);
+        for (let j = 0; j < b; j++){
+            mangCon[j] = +prompt('Nhập mảng con ' + i +' thứ j '+j)
+        }
+        document.writeln(mangCon + '<br>')
+    }
+</script>
+</body>
+</html>

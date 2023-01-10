@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        let a = +prompt('Nhập số Kwh tiêu thụ')
+        if (a > 0 && a <= 50){
+            alert('Số tiền điện của bạn là ' + (a * 1.484) + 'VNĐ/Kwh')
+        }else if (a >= 51 && a <= 100 ){
+            alert('Số tiền điện của bạn là ' + (a * 1.533) + 'VNĐ/Kwh')
+        }else if (a >= 101 && a <= 200){
+            alert('Số tiền điện của bạn là ' + (a * 1.786) + 'VNĐ/Kwh')
+        }else if (a >= 201 && a <= 300){
+            alert('Số tiền điện của bạn là ' + (a * 2.242) + 'VNĐ/Kwh')
+        }else if (a >= 301 && a <= 400){
+            alert('Số tiền điện của bạn là ' + (a * 2.503) + 'VNĐ/Kwh')
+        }else {
+            alert('Số tiền điện của bạn là ' + (a * 2.587) + 'VNĐ/Kwh')
+        }
+    </script>
+
+</body>
+</html>

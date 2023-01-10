@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .wufoo {
+            font-family: "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+<form method="get" action="simpleform.html" class="wufoo">
+    <h2>Order form</h2>
+    <p>What would you like to bye?</p>
+    <select>
+        <option value=" ">A</option>
+        <option>B (+ 0.5$)</option>
+        <option>C (+ 0.5$)</option>
+    </select>
+    <br>
+    <p>How many would you like to order?</p>
+    <input type="radio" name="a"/> 1 - $10 <br/>
+    <input type="radio" name="a"/> 2 - $20 <br/>
+    <input type="radio" name="a"/> 3 - $25 <br/>
+    <br>
+    <p>Name <span style="color: red">*</span></p>
+    <input type="text" name="name1" placeholder="Firstname" style="width: 100px;height: 25px" size="40">
+    <input type="text" name="name2" placeholder="Lastname" style="width: 100px;height: 25px" size="40">
+    <br>
+    <p>
+        <label for="1">Email</label>
+    </p>
+    <input type="text" name="email" style="width: 300px;height: 25px" id="1" size="35">
+    <p>Phone Number</p>
+    <input type="text" name="Iphone 1" size="7"> -
+    <input type="text" name="Iphone 2" size="7"> -
+    <input type="text" name="Iphone 3" size="7">
+    <br>
+    <p><input type = "submit" style="width: 75px;height: 30px" value="submit"></p>
+</form>
+</body>
+</html>

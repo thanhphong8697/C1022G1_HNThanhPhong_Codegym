@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="game()">Bắt đầu</button>
+<script>
+    function game() {
+        let a1 = +prompt('Số bạn muốn đoán trong khoảng lớn nhất là bao nhiêu ?');
+        let a = Math.floor(Math.random() * a1)
+        for (let c = 1; c <= 3; c++) {
+            let b = +prompt('Nhập số bạn đoán');
+            if (a == b) {
+                document.writeln('Bạn đã đoán đúng. Chúc mừng bạn!');
+                break;
+            } else if (a != b) {
+                if (a < b) {
+                    alert(' số bạn đoán lớn hơn')
+                } else {
+                    alert(' số bạn đoán nhỏ hơn')
+                }
+                if (c == 3) {
+                    document.writeln('Bạn đã đoán sai và hết lượt đoán.')
+                }
+            }
+        }
+    }
+
+</script>
+</body>
+</html>

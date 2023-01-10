@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = +prompt('Nhập độ dài của mảng')
+    let c = []
+    for (let i = 0; i < a; i++) {
+        c[i] = prompt('Nhập phần tử của mảng')
+    }
+    function daoNguoc(x) {
+        let count =0;
+        let b = [];
+        for (let i = x.length - 1; i >= 0; i--){
+            b[count] = x[i];
+            count++
+        }
+        return b
+    }
+    document.writeln(daoNguoc(c))
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button type="button" onclick="kiemTra()">Tìm tên ngôi sao</button>
+
+<script>
+    let a = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let b = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function kiemTra() {
+        let sea = prompt('Nhập tên muốn tìm');
+        let ind = a.indexOf(sea);
+        if (ind != -1) {
+            document.writeln('Tên tương ứng của ' + a[ind] + ' là: ' + b[ind]);
+        } else {
+            document.writeln('Không tìm thấy tên nhập vào');
+        }
+    }
+</script>
+</body>
+</html>
