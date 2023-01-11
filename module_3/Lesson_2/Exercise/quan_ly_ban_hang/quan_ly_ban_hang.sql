@@ -1,5 +1,5 @@
-create database quan_ly_ban_hang;
-use quan_ly_ban_hang;
+CREATE DATABASE quan_ly_ban_hang;
+USE quan_ly_ban_hang;
 CREATE TABLE khach_hang (
     id_khach_hang INT PRIMARY KEY,
     ten_khach_hang VARCHAR(45),

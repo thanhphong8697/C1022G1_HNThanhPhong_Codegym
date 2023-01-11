@@ -1,5 +1,5 @@
-create database chuyen_doi_erd;
-use chuyen_doi_erd;
+CREATE DATABASE chuyen_doi_erd;
+USE chuyen_doi_erd;
 CREATE TABLE nha_cung_cap (
     ma_nha_cung_cap INT PRIMARY KEY,
     ten_nha_cung_cap VARCHAR(50),
