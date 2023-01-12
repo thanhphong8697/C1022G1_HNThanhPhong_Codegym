@@ -101,6 +101,10 @@ INSERT INTO khach_hang(ho_ten, ngay_sinh, gioi_tinh, so_cmnd, so_dien_thoai, ema
 ("Nguyễn Thị Hào", "1999-04-08", 0, "965656433", "0763212345", "haohao99@gmail.com", "55 Nguyễn Văn Linh, Kon Tum", 3),
 ("Trần Đại Danh", "1994-07-01", 1, "432341235", "0643343433", "danhhai99@gmail.com", "24 Lý Thường Kiệt, Quảng Ngãi", 1),
 ("Nguyễn Tâm Đắc", "1989-07-01", 1, "344343432", "0987654321", "dactam@gmail.com", "22 Ngô Quyền, Đà Nẵng", 2);
+SELECT 
+    *
+FROM
+    khach_hang;
 CREATE TABLE loai_dich_vu (
     ma_loai_dich_vu INT AUTO_INCREMENT PRIMARY KEY,
     ten_loai_dich_vu VARCHAR(50)
@@ -141,13 +145,13 @@ INSERT INTO dich_vu(ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, tieu_
 ("Villa Beach Front", 25000, 1000000, 10, "vip", "Có hồ bơi", 500, 4, 3, 1);
 INSERT INTO dich_vu(ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, tieu_chuan_phong, mo_ta_tien_nghi_khac, so_tang, ma_kieu_thue, ma_loai_dich_vu) VALUES
 ("House Princess 01", 14000, 5000000, 7, "vip", "Có thêm bếp nướng", 3, 2, 2);
- INSERT INTO dich_vu(ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, tieu_chuan_phong, mo_ta_tien_nghi_khac, dich_vu_mien_phi_di_kem, ma_kieu_thue, ma_loai_dich_vu) VALUES
+INSERT INTO dich_vu(ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, tieu_chuan_phong, mo_ta_tien_nghi_khac, dich_vu_mien_phi_di_kem, ma_kieu_thue, ma_loai_dich_vu) VALUES
  ("Room Twin 01", 5000, 1000000, 2, "normal", "Có tivi", "1 Xe máy, 1 Xe đạp", 4, 3);
 INSERT INTO dich_vu(ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, tieu_chuan_phong, mo_ta_tien_nghi_khac, dien_tich_ho_boi, so_tang, ma_kieu_thue, ma_loai_dich_vu) VALUES
 ("Villa No Beach Front", 22000, 9000000, 8, "normal", "Có hồ bơi", 00, 3, 3, 1);
 INSERT INTO dich_vu(ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, tieu_chuan_phong, mo_ta_tien_nghi_khac, so_tang, ma_kieu_thue, ma_loai_dich_vu) VALUES
 ("House Princess 02", 10000, 4000000, 5, "normal", "Có thêm bếp nướng", 2, 3, 2);
- INSERT INTO dich_vu(ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, tieu_chuan_phong, mo_ta_tien_nghi_khac, dich_vu_mien_phi_di_kem, ma_kieu_thue, ma_loai_dich_vu) VALUES
+INSERT INTO dich_vu(ten_dich_vu, dien_tich, chi_phi_thue, so_nguoi_toi_da, tieu_chuan_phong, mo_ta_tien_nghi_khac, dich_vu_mien_phi_di_kem, ma_kieu_thue, ma_loai_dich_vu) VALUES
  ("Room Twin 02", 3000, 900000, 2, "normal", "Có tivi", "1 Xe máy", 4, 3);
 SELECT 
     *
@@ -175,6 +179,17 @@ CREATE TABLE dich_vu_di_kem (
     don_vi VARCHAR(10) NOT NULL,
     trang_thai VARCHAR(45)
 );
+INSERT INTO dich_vu_di_kem(ten_dich_vu_di_kem, gia, don_vi, trang_thai) VALUES 
+("Karaoke", 10000, "giờ", "tiện nghi, hiện tại"),
+("Thuê xe máy", 10000, "chiếc", "hỏng 1 xe"),
+("Thuê xe đạp", 20000, "chiếc", "tốt"),
+("Buffet buổi sáng", 15000, "suất", "đầy đủ đồ ăn, tráng miệng"),
+("Buffet buổi trưa", 90000, "suất", "đầy đủ đồ ăn, tráng miệng"),
+("Buffet buổi tối", 16000, "suất", "đầy đủ đồ ăn, tráng miệng");
+SELECT 
+    *
+FROM
+    dich_vu_di_kem;
 CREATE TABLE hop_dong_chi_tiet (
     ma_hop_dong_chi_tiet INT AUTO_INCREMENT PRIMARY KEY,
     so_luong INT NOT NULL,
