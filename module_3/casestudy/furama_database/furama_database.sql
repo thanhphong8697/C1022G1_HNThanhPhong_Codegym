@@ -79,16 +79,16 @@ FROM
     loai_khach;
 CREATE TABLE khach_hang (
     ma_khach_hang INT AUTO_INCREMENT PRIMARY KEY,
-    ma_loai_khach INT NOT NULL,
-    CONSTRAINT fk_ma_loai_khach FOREIGN KEY (ma_loai_khach)
-        REFERENCES loai_khach (ma_loai_khach),
     ho_ten VARCHAR(50) NOT NULL,
     ngay_sinh DATE NOT NULL,
     gioi_tinh BIT(1) NOT NULL,
     so_cmnd VARCHAR(50) NOT NULL,
     so_dien_thoai VARCHAR(50) NOT NULL,
     email VARCHAR(50),
-    dia_chi VARCHAR(50)
+    dia_chi VARCHAR(50),
+      ma_loai_khach INT NOT NULL,
+    CONSTRAINT fk_ma_loai_khach FOREIGN KEY (ma_loai_khach)
+        REFERENCES loai_khach (ma_loai_khach)
 );
 INSERT INTO khach_hang(ho_ten, ngay_sinh, gioi_tinh, so_cmnd, so_dien_thoai, email, dia_chi, ma_loai_khach) VALUES 
 ("Nguyễn Thị Hào", "1970-11-07", 0, "643431213", "0945423362", "thihao07@gmail.com", "23 Nguyễn Hoàng, Đà Nẵng", 5),
