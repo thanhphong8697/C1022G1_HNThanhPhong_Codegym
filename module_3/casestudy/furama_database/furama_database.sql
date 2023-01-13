@@ -86,7 +86,7 @@ CREATE TABLE khach_hang (
     so_dien_thoai VARCHAR(50) NOT NULL,
     email VARCHAR(50),
     dia_chi VARCHAR(50),
-      ma_loai_khach INT NOT NULL,
+    ma_loai_khach INT NOT NULL,
     CONSTRAINT fk_ma_loai_khach FOREIGN KEY (ma_loai_khach)
         REFERENCES loai_khach (ma_loai_khach)
 );
@@ -172,6 +172,23 @@ CREATE TABLE hop_dong (
     CONSTRAINT fk_ma_dich_vu FOREIGN KEY (ma_dich_vu)
         REFERENCES dich_vu (ma_dich_vu)
 );
+INSERT INTO hop_dong(ngay_lam_hop_dong, ngay_ket_thuc, tien_dat_coc, ma_nhan_vien, ma_khach_hang, ma_dich_vu) VALUES 
+("2020-12-08", "2020-12-08", 0, 3, 1, 3),
+("2020-07-14", "2020-07-21", 200000, 7, 3, 1),
+("2021-03-15", "2021-03-17", 50000, 3, 4, 2),
+("2021-01-14", "2021-01-18", 100000, 7, 5, 5),
+("2021-07-14", "2021-07-15", 0, 7, 2, 6),
+("2021-06-01", "2021-06-03", 0, 7, 7, 6),
+("2021-09-02", "2021-09-05", 100000, 7, 4, 4),
+("2021-06-17", "2021-06-18", 150000, 3, 4, 1),
+("2020-11-19", "2020-11-19", 0, 3, 4, 3),
+("2021-04-12", "2021-04-14", 0, 10, 3, 5),
+("2021-04-25", "2021-04-25", 0, 2, 2, 1),
+("2021-05-25", "2021-05-27", 0, 7, 10, 1);
+SELECT 
+    *
+FROM
+    hop_dong;
 CREATE TABLE dich_vu_di_kem (
     ma_dich_vu_di_kem INT AUTO_INCREMENT PRIMARY KEY,
     ten_dich_vu_di_kem VARCHAR(45) NOT NULL,
@@ -200,3 +217,16 @@ CREATE TABLE hop_dong_chi_tiet (
     CONSTRAINT fk_ma_dich_vu_di_kem FOREIGN KEY (ma_dich_vu_di_kem)
         REFERENCES dich_vu_di_kem (ma_dich_vu_di_kem)
 );
+INSERT INTO hop_dong_chi_tiet(so_luong, ma_hop_dong, ma_dich_vu_di_kem) VALUES 
+(5, 2, 4),
+(8, 2, 5),
+(15, 2, 6),
+(1, 3, 1),
+(11, 3, 2),
+(1, 1, 3),
+(2, 1, 2),
+(2, 12, 2);
+SELECT 
+    *
+FROM
+    hop_dong_chi_tiet;
