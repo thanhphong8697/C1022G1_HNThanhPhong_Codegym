@@ -32,6 +32,7 @@ create view view_product (product_code_view , product_name_view , product_price_
         product_code, product_name, product_price, product_status
     from
         products;
+        
 select 
     *
 from
@@ -43,6 +44,7 @@ where
     product_code_view = '1a';
 drop view view_product;
 
+
 delimiter // 
 create procedure list_product()
 begin
@@ -51,51 +53,52 @@ end
 // delimiter ;
 call list_product;
 
+
 delimiter // 
 create procedure add_product(
- add_product_code varchar(10),
-    add_product_name varchar(50),
-    add_product_price double,
-    add_product_amount int,
-    add_product_description varchar(40),
-    add_product_status varchar(50)
+ in p_product_code varchar(10),
+  in  p_product_name varchar(50),
+  in  p_product_price double,
+   in p_product_amount int,
+   in p_product_description varchar(40),
+  in  p_product_status varchar(50)
 )
 begin
 insert into products (product_code, product_name, product_price, product_amount, product_description, product_status) values  
-(add_product_code, add_product_name, add_product_price, add_product_amount, add_product_description, add_product_status);
+(p_product_code, p_product_name, p_product_price, p_product_amount, p_product_description, p_product_status);
 end
 // delimiter ;
 call add_product("4a", "đũa", 10000, 10, "tre", "còn hàng");
 
 delimiter // 
 create procedure edit_product(
-edit_id int,
- edit_product_code varchar(10),
-    edit_product_name varchar(50),
-    edit_product_price double,
-    edit_product_amount int,
-    edit_product_description varchar(40),
-    edit_product_status varchar(50)
+in p_id int,
+ in p_product_code varchar(10),
+    in p_product_name varchar(50),
+    in p_product_price double,
+    in p_product_amount int,
+    in p_product_description varchar(40),
+    in p_product_status varchar(50)
 )
 begin
 update products
 set 
-products.product_code = edit_product_code,
-products.product_name = edit_product_name,
-products.product_price = edit_product_price,
-products.product_amount = edit_product_amount,
-products.product_description = edit_product_description,
-products.product_status = edit_product_status
+products.product_code = p_product_code,
+products.product_name = p_product_name,
+products.product_price = p_product_price,
+products.product_amount = p_product_amount,
+products.product_description = p_product_description,
+products.product_status = p_product_status
 where 
-products.id = edit_id;
+products.id = p_id;
 end
 // delimiter ;
 
 delimiter // 
-create procedure delete_product(id int) 
+create procedure delete_product(in p_id int) 
 begin
 delete from products
-where products.id = id;
+where products.id = p_id;
 end
 // delimiter ;
 call delete_product(4);
