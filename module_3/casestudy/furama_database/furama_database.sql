@@ -1,5 +1,6 @@
 CREATE DATABASE furama_database;
 USE furama_database;
+-- drop database furama_database;
 CREATE TABLE vi_tri (
     ma_vi_tri INT AUTO_INCREMENT PRIMARY KEY,
     ten_vi_tri VARCHAR(50)
