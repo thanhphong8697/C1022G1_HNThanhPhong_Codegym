@@ -27,16 +27,14 @@ where product_name = "bát";
 explain select * from products
 where product_price = "30000";
 
-create view view_product (product_code_view , product_name_view , product_price_view , product_status_view) AS
+create view view_product AS
     select 
         product_code, product_name, product_price, product_status
     from
         products;
         
-select 
-    *
-from
-    view_product;
+select * from view_product;
+
 update view_product 
 set 
     product_price_view = 15000
@@ -56,12 +54,12 @@ call list_product;
 
 delimiter // 
 create procedure add_product(
- in p_product_code varchar(10),
-  in  p_product_name varchar(50),
-  in  p_product_price double,
+   in p_product_code varchar(10),
+   in p_product_name varchar(50),
+   in p_product_price double,
    in p_product_amount int,
    in p_product_description varchar(40),
-  in  p_product_status varchar(50)
+   in p_product_status varchar(50)
 )
 begin
 insert into products (product_code, product_name, product_price, product_amount, product_description, product_status) values  
@@ -72,8 +70,8 @@ call add_product("4a", "đũa", 10000, 10, "tre", "còn hàng");
 
 delimiter // 
 create procedure edit_product(
-in p_id int,
- in p_product_code varchar(10),
+	in p_id int,
+	in p_product_code varchar(10),
     in p_product_name varchar(50),
     in p_product_price double,
     in p_product_amount int,
