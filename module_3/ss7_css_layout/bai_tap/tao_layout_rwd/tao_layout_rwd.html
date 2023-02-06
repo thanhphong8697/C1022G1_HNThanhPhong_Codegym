@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo layout với RWD</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .col-1 {
+            width: 8.33%;
+        }
+
+        .col-2 {
+            width: 16.66%;
+        }
+
+        .col-3 {
+            width: 25%;
+        }
+
+        .col-4 {
+            width: 33.33%;
+        }
+
+        .col-5 {
+            width: 41.66%;
+        }
+
+        .col-6 {
+            width: 50%;
+        }
+
+        .col-7 {
+            width: 58.33%;
+        }
+
+        .col-8 {
+            width: 66.66%;
+        }
+
+        .col-9 {
+            width: 75%;
+        }
+
+        .col-10 {
+            width: 83.33%;
+        }
+
+        .col-11 {
+            width: 91.66%;
+        }
+
+        .col-12 {
+            width: 100%;
+        }
+
+        [class*="col-"] {
+            float: left;
+            padding: 5px;
+        }
+
+        .float li {
+            float: left;
+            margin-left: 20px;
+            list-style-type: none;
+        }
+
+        .row::after {
+            display: block;
+            clear: both;
+            content: "";
+        }
+
+        .header {
+            color: white;
+            background: black;
+            height: 50px;
+            line-height: 50px;
+        }
+
+        .float a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .login {
+            padding-right: 25px;
+            float: right;
+        }
+
+        .link li {
+            color: green;
+            list-style-type: none;
+            text-align: center;
+        }
+
+        .welcome {
+            font-size: 50px;
+            font-weight: bold;
+        }
+        .colortest {
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .padding {
+          padding-bottom: 15px;
+        }
+        .adc {
+            padding: 35px 20px;
+            margin: 20px;
+            border: 1px solid darkgray ;
+            background-color: #F5F5F5;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .footer {
+            background-color: #555555;
+            text-align: center;
+            padding: 15px;
+            color: white;
+            margin-top: 0px;
+        }
+        .line {
+            height: 500px;
+        }
+    </style>
+    <link rel="stylesheet" href="media.css">
+</head>
+<body>
+<div class="row header">
+    <ul class="float">
+        <li style="font-size: 20px"><a href="">Logo</a></li>
+        <li><a href="">Home</a></li>
+        <li><a href="">About</a></li>
+        <li><a href="">Project</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+    <div class="login">🠚] Login</div>
+</div>
+<div class="row line">
+    <div class="col-2 line" style="background-color: #F1F1F1;">
+        <ul class="link">
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+            <li><a href="">link</a></li>
+        </ul>
+    </div>
+    <div class="col-8 line" style="padding: 0px 15px ">
+        <p class="welcome padding">Welcome</p>
+        <p class="padding">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, architecto aspernatur at blanditiis culpa
+            cum cumque deleniti doloremque error et eveniet excepturi harum impedit ipsum magnam maiores maxime minima
+            minus molestias neque numquam odit perferendis provident quae qui quidem quisquam quo recusandae rerum sed
+            temporibus veniam veritatis voluptate? Aliquid distinctio dolorum esse ex fuga inventore itaque libero,
+            nesciunt perferendis perspiciatis provident quasi quis repudiandae rerum unde veniam voluptatem. Beatae,
+            debitis dicta magni nostrum numquam possimus. A alias doloremque esse eum eveniet explicabo ipsam ipsum
+            minus molestiae nihil odio officiis placeat possimus ratione, sint sunt tenetur. Dolorem ea iste similique
+            vero .
+        </p>
+        <p class="colortest padding">
+            Test
+        </p>
+        <p class="padding">
+            Lorem ipsum
+        </p>
+    </div>
+    <div class="col-2 line" style="background-color: #F1F1F1">
+        <p class="adc">
+            ADS
+        </p>
+        <p class="adc">
+            ADS
+        </p>
+    </div>
+</div>
+<div class="footer">Footer Text</div>
+</body>
+</html>
