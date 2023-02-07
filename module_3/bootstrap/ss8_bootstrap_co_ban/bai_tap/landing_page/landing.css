@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.logo {
+    width: 65%;
+    margin: 0;
+    padding: 20px;
+}
+.float {
+    float: right;
+    margin: 0;
+}
+.bar {
+    font-weight: bold;
+    font-size: 40px;
+    padding: 0;
+}
+.sub {
+    font-size: 20px;
+}
+.color {
+    color: white;
+    background-color: #0067B8;
+}
+.mar_shop_deal {
+    margin-right: 164px;
+}
+.heigth {
+    height: 50px;
+    line-height: 50px;
+}
