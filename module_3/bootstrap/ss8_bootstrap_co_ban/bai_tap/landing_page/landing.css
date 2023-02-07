@@ -31,3 +31,19 @@
     height: 50px;
     line-height: 50px;
 }
+.rela {
+    position: relative;
+    width: 100%;
+}
+.ab {
+    position: absolute;
+    width: 500px;
+    height: 300px;
+    font-weight: bold;
+    top: 100px;
+    left: 50px;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
