@@ -131,8 +131,8 @@ public class ProductServlet extends HttpServlet {
         }
     }
     private void searchProduct(HttpServletRequest request, HttpServletResponse response){
-        String name = request.getParameter("name");
-            List<Product> productList = iProductService.search(name);
+        String search = request.getParameter("search");
+            List<Product> productList = iProductService.search(search);
         RequestDispatcher dispatcher;
             if (productList == null){
                 dispatcher =  request.getRequestDispatcher("Product/error.jsp");
@@ -166,6 +166,9 @@ public class ProductServlet extends HttpServlet {
                 break;
             case "delete":
                 deleteForm(request,response);
+                break;
+
+            case "search":
                 break;
             default:
                 listProduct(request,response);

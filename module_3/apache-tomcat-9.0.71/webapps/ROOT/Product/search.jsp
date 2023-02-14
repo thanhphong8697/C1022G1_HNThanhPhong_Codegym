@@ -31,14 +31,14 @@
     </thead>
     <tbody>
     <tr>
-        <c:forEach items='${requestScope["product"]}' var="products">
+        <c:forEach items='${requestScope["productList"]}' var="products">
     <tr>
-        <td><a href="/product?action=view&id=${products.id}">${products.name}</a></td>
+        <td><a href="/product?action=view&name=${products.name}">${products.name}</a></td>
         <td>${products.price}</td>
         <td>${products.status}</td>
         <td>${products.manufacturer}</td>
-        <td><a class="btn btn-primary" href="/product?action=edit&id=${products.id}">Edit</a></td>
-        <td><a class="btn btn-danger" href="/product?action=delete&id=${products.id}">Delete</a></td>
+        <td><a class="btn btn-primary" href="/product?action=edit&name=${products.name}">Edit</a></td>
+        <td><a class="btn btn-danger" href="/product?action=delete&name=${products.name}">Delete</a></td>
     </tr>
     </c:forEach>
     </tr>

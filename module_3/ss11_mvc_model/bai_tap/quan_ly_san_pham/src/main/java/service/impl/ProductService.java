@@ -42,12 +42,13 @@ public class ProductService implements IProductService {
 
     @Override
     public List<Product> search(String name) {
-        List<Product> productList = new ArrayList<>();
+        List<Product> productList = new ArrayList<>(productMap.values());
+        List<Product> productList2 = new ArrayList<>();
         for (Product product : productList){
             if (product.getName().contains(name)){
-                productList.add(product);
+                productList2.add(product);
             }
         }
-        return productList;
+        return productList2;
     }
 }
