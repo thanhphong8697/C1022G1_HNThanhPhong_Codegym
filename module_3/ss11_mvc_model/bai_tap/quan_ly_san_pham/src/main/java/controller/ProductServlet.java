@@ -105,7 +105,7 @@ public class ProductServlet extends HttpServlet {
             dispatcher =  request.getRequestDispatcher("Product/error.jsp");
         }else {
             request.setAttribute("product", product);
-            dispatcher = request.getRequestDispatcher("Product/edit.jsp");
+            dispatcher = request.getRequestDispatcher("Product/delete.jsp");
         }
         try {
             dispatcher.forward(request,response);
@@ -130,7 +130,28 @@ public class ProductServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
-    @Override
+    private void searchProduct(HttpServletRequest request, HttpServletResponse response){
+        String name = request.getParameter("name");
+            List<Product> productList = iProductService.search(name);
+        RequestDispatcher dispatcher;
+            if (productList == null){
+                dispatcher =  request.getRequestDispatcher("Product/error.jsp");
+            }else {
+                request.setAttribute("productList", productList);
+                dispatcher = request.getRequestDispatcher("Product/search.jsp");
+            }
+        try {
+            dispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+        @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
         if (action == null){
@@ -145,8 +166,6 @@ public class ProductServlet extends HttpServlet {
                 break;
             case "delete":
                 deleteForm(request,response);
-                break;
-            case "view":
                 break;
             default:
                 listProduct(request,response);
@@ -169,6 +188,9 @@ public class ProductServlet extends HttpServlet {
                 break;
             case "delete":
                 deleteProduct(request,response);
+                break;
+            case "search":
+                searchProduct(request,response);
                 break;
             default:
                 break;

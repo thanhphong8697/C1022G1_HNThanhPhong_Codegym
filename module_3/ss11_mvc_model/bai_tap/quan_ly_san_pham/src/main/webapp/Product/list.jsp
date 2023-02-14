@@ -24,6 +24,11 @@
 <p>
     <a href="/product?action=create">Create new product</a>
 </p>
+<form action="/product?action=search" method="post">
+    <input type="text" name="search">
+    <input type="submit" value="Search">
+</form>
+
 <table class="table">
     <thead>
     <tr>
@@ -41,8 +46,8 @@
         <td>${products.price}</td>
         <td>${products.status}</td>
         <td>${products.manufacturer}</td>
-        <td><a href="/product?action=edit&id=${products.id}">Edit</a></td>
-        <td><a href="/product?action=delete&id=${products.id}">Delete</a></td>
+        <td><a class="btn btn-primary" href="/product?action=edit&id=${products.id}">Edit</a></td>
+        <td><a class="btn btn-danger" href="/product?action=delete&id=${products.id}">Delete</a></td>
     </tr>
     </c:forEach>
     </tr>

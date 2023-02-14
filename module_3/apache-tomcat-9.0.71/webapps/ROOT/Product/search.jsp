@@ -2,7 +2,7 @@
   Created by IntelliJ IDEA.
   User: Admin
   Date: 14/2/2023
-  Time: 6:27 AM
+  Time: 11:16 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -10,7 +10,8 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Edit product</title>    <!-- Required meta tags -->
+    <title>Search product</title>
+    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
@@ -19,36 +20,30 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<h1>Edit product</h1>
-<p>
-    <a href="/product">Back to product list</a>
-</p>
-<form method="post">
-    <fieldset>
-        <legend>Product information</legend>
-        <table>
-            <tr>
-                <td>Name</td>
-                <td><input type="text" name="name" value="${product.name}"></td>
-            <tr>
-                <td>Price</td>
-                <td><input type="text" name="price"  value="${product.price}"></td>
-            </tr>
-            <tr>
-                <td>Status</td>
-                <td><input type="text" name="status" value="${product.status}"></td>
-            </tr>
-            <tr>
-                <td>Manufacturer</td>
-                <td><input type="text" name="manufacturer" value="${product.manufacturer}"></td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><input type="submit" value="update product"></td>
-            </tr>
-        </table>
-    </fieldset>
-</form>
+<table class="table">
+    <thead>
+    <tr>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Status</td>
+        <td>Manufacturer</td>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <c:forEach items='${requestScope["product"]}' var="products">
+    <tr>
+        <td><a href="/product?action=view&id=${products.id}">${products.name}</a></td>
+        <td>${products.price}</td>
+        <td>${products.status}</td>
+        <td>${products.manufacturer}</td>
+        <td><a class="btn btn-primary" href="/product?action=edit&id=${products.id}">Edit</a></td>
+        <td><a class="btn btn-danger" href="/product?action=delete&id=${products.id}">Delete</a></td>
+    </tr>
+    </c:forEach>
+    </tr>
+    </tbody>
+</table>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

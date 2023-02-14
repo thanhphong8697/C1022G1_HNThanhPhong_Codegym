@@ -39,4 +39,15 @@ public class ProductService implements IProductService {
     public void remove(int id) {
         productMap.remove(id);
     }
+
+    @Override
+    public List<Product> search(String name) {
+        List<Product> productList = new ArrayList<>();
+        for (Product product : productList){
+            if (product.getName().contains(name)){
+                productList.add(product);
+            }
+        }
+        return productList;
+    }
 }
