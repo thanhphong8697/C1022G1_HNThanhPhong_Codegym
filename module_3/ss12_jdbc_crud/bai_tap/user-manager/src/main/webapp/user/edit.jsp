@@ -20,19 +20,19 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 </head>
 <body>
-<form method="post" >
+<form method="post">
     <input type="hidden" value="${user.id}">
     <div>
         <label for="name">Input name</label>
-        <input type="text" name="name" id="name"  value="${user.name}">
+        <input type="text" name="name" id="name" value="${user.name}">
     </div>
     <div>
         <label for="email">Input email</label>
-        <input type="text" name="email" id="email"  value="${user.email}">
+        <input type="text" name="email" id="email" value="${user.email}">
     </div>
     <div>
         <label for="country">Input country</label>
-        <input type="text" name="country" id="country"  value="${user.country}">
+        <input type="text" name="country" id="country" value="${user.country}">
     </div>
 
     <input type="submit" value="update">

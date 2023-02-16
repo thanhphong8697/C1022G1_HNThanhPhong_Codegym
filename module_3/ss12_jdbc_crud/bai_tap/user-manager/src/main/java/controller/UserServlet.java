@@ -135,15 +135,16 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
     private void deleteUser(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("deleteId"));
         User user = this.iUserService.findById(id);
         RequestDispatcher dispatcher;
         try {
-            if (user == null){
+            if (user == null) {
                 dispatcher = request.getRequestDispatcher("/user/list.jsp");
                 dispatcher.forward(request, response);
-            }else {
+            } else {
                 this.iUserService.delete(id);
                 response.sendRedirect("/users");
             }

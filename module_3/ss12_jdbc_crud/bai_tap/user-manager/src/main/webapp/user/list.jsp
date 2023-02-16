@@ -32,7 +32,8 @@
         <div class="col-6">
             <form action="/users" method="get">
                 <div class="form-group float-left w-75">
-                    <input type="text" class="form-control" name="countryName" placeholder="Search" value="${countryName}">
+                    <input type="text" class="form-control" name="countryName" placeholder="Search"
+                           value="${countryName}">
                 </div>
                 <div class="float-left w25">
                     <input type="submit" class="form-control btn-secondary" name="search" value="Search">
@@ -55,21 +56,21 @@
     <tbody>
     <c:forEach var="user" items="${userList}" varStatus="stt">
         <tr>
-        <td>${stt.count}</td>
-        <td>${user.name}</td>
-        <td>${user.email}</td>
-        <td>${user.country}</td>
-        <td>
-            <button type="button" class="btn btn-danger")>
-                <a href="/users?action=update&id=${user.id}" class="btn-danger">Edit</a>
-            </button>
+            <td>${stt.count}</td>
+            <td>${user.name}</td>
+            <td>${user.email}</td>
+            <td>${user.country}</td>
+            <td>
+                <button type="button" class="btn btn-danger" )>
+                    <a href="/users?action=update&id=${user.id}" class="btn-danger">Edit</a>
+                </button>
             </td>
-        <td>
-            <button type="button" class="btn btn-primary" data-toggle="modal"
-                    onclick="dele(${user.id})"
-                    data-target="#modelId">
-                Delete
-            </button>
+            <td>
+                <button type="button" class="btn btn-primary" data-toggle="modal"
+                        onclick="dele(${user.id})"
+                        data-target="#modelId">
+                    Delete
+                </button>
         </tr>
     </c:forEach>
     </tbody>
@@ -94,7 +95,7 @@
                     <input type="hidden" name="deleteId" id="deleteId">
                     <button type="submit" class="btn btn-primary">Save</button>
                 </form>
-                
+
             </div>
         </div>
     </div>

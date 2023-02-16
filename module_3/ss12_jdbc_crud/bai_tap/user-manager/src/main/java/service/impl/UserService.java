@@ -9,6 +9,7 @@ import java.util.List;
 
 public class UserService implements IUserService {
     IUserRepository iUserRepository = new UserRepository();
+
     @Override
     public void add(User user) {
         iUserRepository.add(user);
@@ -21,7 +22,7 @@ public class UserService implements IUserService {
 
     @Override
     public List<User> listAll(String countryName) {
-        if (countryName == null){
+        if (countryName == null) {
             countryName = "";
         }
         return iUserRepository.listAll(countryName);
