@@ -24,14 +24,18 @@
 
 <div class="container-fluid">
     <div class="row">
-        <div class="col-6"><a href="/users?action=create">Create new user</a></div>
+        <div class="col-6">
+            <button type="button" class="btn btn-secondary" )>
+                <a href="/users?action=create" style="color: white">Create new user</a>
+            </button>
+        </div>
         <div class="col-6">
             <form action="/users" method="get">
                 <div class="form-group float-left w-75">
                     <input type="text" class="form-control" name="countryName" placeholder="Search" value="${countryName}">
                 </div>
                 <div class="float-left w25">
-                    <input type="submit" class="form-control" name="search" value="Search">
+                    <input type="submit" class="form-control btn-secondary" name="search" value="Search">
                 </div>
             </form>
         </div>
@@ -55,11 +59,15 @@
         <td>${user.name}</td>
         <td>${user.email}</td>
         <td>${user.country}</td>
-        <td><a href="/users?action=update&id=${user.id}">Edit</a></td>
         <td>
-            <button type="button" class="btn btn-primary" data-bs-toggle="modal"
-                    onclick="dele('${user.id}', '${user.name}')"
-                    data-bs-target="#exampleModal">
+            <button type="button" class="btn btn-danger")>
+                <a href="/users?action=update&id=${user.id}" class="btn-danger">Edit</a>
+            </button>
+            </td>
+        <td>
+            <button type="button" class="btn btn-primary" data-toggle="modal"
+                    onclick="dele(${user.id})"
+                    data-target="#modelId">
                 Delete
             </button>
         </tr>
@@ -67,25 +75,31 @@
     </tbody>
 </table>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+<div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h5 class="modal-title">Delete user</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <form action="/users?action=delete" method="post">
             <div class="modal-body">
-                ...
+                Body
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <form action="/users" method="get">
+                    <input type="hidden" name="action" value="delete">
+                    <input type="hidden" name="deleteId" id="deleteId">
+                    <button type="submit" class="btn btn-primary">Save</button>
+                </form>
+                
             </div>
-            </form>
         </div>
     </div>
 </div>
+
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
@@ -101,9 +115,8 @@
 
 </body>
 <script>
-    function dele(id,name) {
-        document.getElementById("id").value = id;
-        document.getElementById("name").innerText= name;
+    function dele(id) {
+        document.getElementById("deleteId").value = id;
     }
 </script>
 </html>

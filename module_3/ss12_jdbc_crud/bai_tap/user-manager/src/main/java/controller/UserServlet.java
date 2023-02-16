@@ -32,6 +32,7 @@ public class UserServlet extends HttpServlet {
                 updateForm(request, response);
                 break;
             case "delete":
+                deleteUser(request, response);
                 break;
             default:
                 listUser(request, response);
@@ -51,9 +52,6 @@ public class UserServlet extends HttpServlet {
                 break;
             case "update":
                 updateUser(request, response);
-                break;
-            case "delete":
-                deleteUser(request, response);
                 break;
             default:
                 break;
@@ -138,7 +136,7 @@ public class UserServlet extends HttpServlet {
         }
     }
     private void deleteUser(HttpServletRequest request, HttpServletResponse response) {
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("deleteId"));
         User user = this.iUserService.findById(id);
         RequestDispatcher dispatcher;
         try {
@@ -147,7 +145,7 @@ public class UserServlet extends HttpServlet {
                 dispatcher.forward(request, response);
             }else {
                 this.iUserService.delete(id);
-                listUser(request, response);
+                response.sendRedirect("/users");
             }
         } catch (ServletException e) {
             e.printStackTrace();
@@ -155,4 +153,5 @@ public class UserServlet extends HttpServlet {
             e.printStackTrace();
         }
     }
+
 }
